@@ -45,6 +45,12 @@ variable "s3_env" {
   default = null
 }
 
+variable "bucket_name" {
+  type    = string
+  default = null
+
+}
+
 variable "aws_account_alias" {
   type    = string
   default = ""

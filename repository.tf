@@ -3,7 +3,7 @@ locals {
   org_name            = var.org != null && length(var.org) > 0 ? "${var.org}/" : ""
 }
 
-resource "github_repository" "example" {
+resource "github_repository" "tf_repository" {
   name = "${local.org_name}${var.repository_name}"
 
   description = var.description
@@ -17,3 +17,4 @@ resource "github_repository" "example" {
     include_all_branches = false
   }
 }
+
